@@ -41,7 +41,7 @@ namespace Microsoft.Deployment.Utilities
                     return false;
                 }
 
-                string launcherTemplatePath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), LauncherTemplate);
+                string launcherTemplatePath = Path.Combine(Path.GetDirectoryName(System.AppContext.BaseDirectory), LauncherTemplate);
                 if (!File.Exists(launcherTemplatePath))
                 {
                     Application.PrintErrorMessage(ErrorMessages.MissingLauncherTemplate, launcherTemplatePath);
