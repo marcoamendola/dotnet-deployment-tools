@@ -1637,7 +1637,7 @@ namespace Microsoft.Deployment.MageCLI
                 manifest.Validate();
 
                 bool launcherBasedDeployment =
-                    string.Equals(manifest.EntryPoint.TargetPath.ToLower(), LauncherUtil.LauncherFilename.ToLower(), StringComparison.OrdinalIgnoreCase);
+                    string.Equals(manifest.EntryPoint?.TargetPath.ToLower(), LauncherUtil.LauncherFilename.ToLower(), StringComparison.OrdinalIgnoreCase);
 
                 // Prints out all the information.
                 foreach (OutputMessage msg in manifest.OutputMessages)
